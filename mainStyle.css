@@ -1,3 +1,33 @@
+html{
+    direction: rtl;
+    font-family: OpenSansHebrew,sans-serif;
+
+}
+label,input{
+display: block;
+margin-left: 20px;
+}
+
+#log-in{
+    width: 417px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: #3b68ff;
+    color:white;
+    font-size: 20px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.35;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #ffffff;
+}
+
+li{
+    display: inline-block;
+    margin-left: 20px;
+}
+
 h1 {
  color: palevioletred;
 };

@@ -1,33 +1,63 @@
-html{
-    direction: rtl;
-    font-family: OpenSansHebrew,sans-serif;
+html {
+ direction: rtl;
+}
+body {
+ font-family: 'Open Sans Hebrew', sans-serif;
+ margin: 0;
+ height: 100vh;
+ letter-spacing: 0.5px;
+ overflow: hidden;
+}
+#container {
+ min-width: 1300px;
+ height: 100%;
+ background: url(images/mainScreen.png) no-repeat;
+ background-size: 140%;
+ background-position: 50% 60%;
+}
 
+#login {
+ color: white;
+ padding: 50px 50px 0 50px;
+ width: 70%;
+ height: 100%;
+ background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.95) 60%); /* FF3.6-15 */
+ background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 60%); /* Chrome10-25,Safari5.1-6 */
+ background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 60%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+}
+h1 {
+ font-size: 2em;
+ font-weight: medium;
+ line-height: 1.36;
 }
 label,input{
-display: block;
-margin-left: 20px;
+ display: block;
+ margin-left: 20px;
 }
 
-#log-in{
-    width: 417px;
-    height: 48px;
-    border-radius: 10px;
-    background-color: #3b68ff;
-    color:white;
-    font-size: 20px;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.35;
-    letter-spacing: 1px;
-    text-align: center;
-    color: #ffffff;
+#login-btn{
+ width: 417px;
+ height: 48px;
+ border-radius: 10px;
+ background-color: #3b68ff;
+ color:white;
+ font-size: 20px;
+ font-stretch: normal;
+ font-style: normal;
+ line-height: 1.35;
+ letter-spacing: 1px;
+ text-align: center;
+ color: #ffffff;
 }
 
 li{
-    display: inline-block;
-    margin-left: 20px;
+ display: inline-block;
+ margin-left: 20px;
+}
+footer {
+ color: white;
+ position: absolute;
+ bottom: 0;
 }
 
-h1 {
- color: palevioletred;
-};

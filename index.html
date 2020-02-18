@@ -12,37 +12,56 @@
 <body>
  <div id="container">
   <div id="login">
-   <h1>התחל במסע שלך למציאת</h1>
-   <h2>המעגל האקדמי שלך</h2>
-    <ul>
-     <li>כניסה</li> 
-     <li>הרשמה</li>
+  <img id="logo-img" src="images/logo.svg" alt="logo bioit">
+    <h1>התחל במסע שלך למציאת</h1>
+    <h2 class="type-it"></h2>
+   <div id="login-nav">
+    <ul id="login-ul">
+     <li><a href="#" rel="logintab" class="active">כניסה</a></li>
+     <li><a href="#" rel="regtab">הרשמה</a></li>
     </ul>
-    <form>
-     <label for="mail">מייל</label>
-     <input id="mail "type="text">
-     <label for="pass">סיסמה</label>
-     <input id="pass"type="text">
-    </form>
-    <form>
-     <label for="mail">מייל</label>
-     <input id="mail "type="text">
-     <label for="pass">סיסמה</label>
-     <input id="pass"type="text">
-     <label for="Vpass">ודא סיסמא</label>
-     <input id="Vpass"type="text">
-    </form>
-    <button id="login-btn"type="submit">כניסה</button>
   </div>
- </div>
- <footer>
-  <ul>
-    <li>אודות</li>
-    <li>מידע נוסף</li>
-    <li>הגדרות</li>
-    <li>כל הזכויות שמורות</li>
-  </ul>
- </footer>
+    <form id="logintab" class="form-slider">
+      <div class="input-group">
+        <input id="mail" type="text" required>
+        <label for="mail">מייל</label>
+        <span class="input-bar"></span>
+      </div>
+      <div class="input-group">
+        <input id="pass"type="text" required>
+        <label for="pass">סיסמה</label>
+        <span class="input-bar"></span>
+      </div>
+      <button id="login-btn"type="submit">כניסה</button>
+    </form>
+    <form id="regtab" class="form-slider">
+      <div class="input-group">
+        <input id="mail" type="text" required>
+        <label for="mail">מייל</label>
+        <span class="input-bar"></span>
+      </div>
+      <div class="input-group">
+        <input id="pass"type="text" required>
+        <label for="pass">סיסמה</label>
+        <span class="input-bar"></span>
+      </div>
+      <div class="input-group">
+        <input id="pass"type="text" required>
+        <label for="pass">וידוא סיסמה</label>
+        <span class="input-bar"></span>
+      </div>
+      <button id="register-btn"type="submit">הרשמה</button>
+    </form>
+  </div>
+  <footer>
+    <ul>
+      <li>אודות</li>
+      <li>מידע נוסף</li>
+      <li>הגדרות</li>
+      <li>כל הזכויות שמורות</li>
+    </ul>
+  </footer>
+  </div>
 </body>
 
 </html>

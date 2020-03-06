@@ -1,6 +1,5 @@
 $(document).ready(function(){
   AOS.init();
-
 /*******Typing words******/
 // get the element
 const text = document.querySelector('.type-it');
@@ -120,10 +119,10 @@ $(".form-slider:first").show();
  });
 
  $('#register-btn').click(function(){
+  $("#login-bg").addClass("fadeOut");
   $(".disappear").fadeOut(700);
-  $('#login-bg').addClass('blur');
   setTimeout(function(){
     $("body").load("registration.html #container");
-}, 1000);
+}, 1500);
 });
 });

@@ -65,6 +65,22 @@ form {
       transform: translateY(0);
    } 
   }
+@keyframes RegularFadeAnimation { 
+  0% { 
+      opacity: 0;
+  } 
+  100% { 
+      opacity: 1; 
+    }
+  }
+@keyframes fadeOut {
+  0% { 
+    opacity: 1;
+  } 
+  100% { 
+    opacity: 0;
+    } 
+  }
 @keyframes blur {
   0% {
       -webkit-filter: blur(0px);
@@ -74,11 +90,11 @@ form {
       filter: blur(0px);
   }
   100% {
-      -webkit-filter: blur(4px);
-      -moz-filter: blur(4px);
-      -o-filter: blur(4px);
-      -ms-filter: blur(4px);
-      filter: blur(4px);
+      -webkit-filter: blur(20px);
+      -moz-filter: blur(20px);
+      -o-filter: blur(20px);
+      -ms-filter: blur(20px);
+      filter: blur(20px);
   }
 }
 
@@ -161,14 +177,26 @@ input:focus ~ .input-bar:before {
 }
 
 #logo-img {
- position: relative;
- width: 50px;
- margin-bottom: 30px;
+  z-index: 1;
+  position: absolute;
+  width: 50px;
+  margin-top: 50px;
+  margin-right: 70px;
 }
 #login-bg {
   background: radial-gradient(circle, rgba(100,100,100,0.4) 5%, rgba(0,0,0,0.85) 100%), url(images/mainScreen.png) no-repeat;
-  background-size: 130%;
-  background-position: 50% 62%;
+  background-size: 110%;
+  background-position: 50% 60%;
+  object-fit: contain;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#login-bg2 {
+  background: url(images/mainScreen2.png) no-repeat;
+  background-size: 110%;
+  background-position: 50% 60%;
   object-fit: contain;
   height: 100%;
 }
@@ -177,10 +205,13 @@ input:focus ~ .input-bar:before {
  padding: 50px 70px 0 50px;
  width: 70%;
  height: 100%;
- background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.95) 60%); /* FF3.6-15 */
- background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 60%); /* Chrome10-25,Safari5.1-6 */
- background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 60%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+ padding-top: 150px;
+}
+.login-shadow {
+  background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.95) 60%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 60%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 60%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
 }
 #login-nav {
  position: relative;
@@ -277,9 +308,14 @@ li {
 
 /**********************Registration 1***********************/
 #reg-container {
-    animation: fadeInAnimation ease 1s;
+    animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards; 
+}
+.fadeOut {
+  animation: fadeOut ease 1.4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; 
 }
 /************Footer***********/
 footer {

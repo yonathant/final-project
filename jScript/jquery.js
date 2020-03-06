@@ -120,9 +120,11 @@ $(".form-slider:first").show();
  });
 
  $('#register-btn').click(function(){
-  $(".disappear").fadeOut(1000);
+  $(".disappear").fadeOut(700);
+
   setTimeout(function(){
     $("body").load("registration.html #container");
+
 }, 2000);
   // $("#login").animate({opacity: 1},4000);
   // $('#container').hide().load("registration.html #container").fadeIn('500');

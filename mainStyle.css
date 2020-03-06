@@ -46,6 +46,42 @@ form {
    opacity: 1;
  }
 }
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+@keyframes fadeInAnimation { 
+  0% { 
+      opacity: 0;
+      transform: translateY(100px);
+  } 
+  30% {
+    opacity: 0;
+  }
+  100% { 
+      opacity: 1; 
+      transform: translateY(0);
+   } 
+  }
+@keyframes blur {
+  0% {
+      -webkit-filter: blur(0px);
+      -moz-filter: blur(0px);
+      -o-filter: blur(0px);
+      -ms-filter: blur(0px);
+      filter: blur(0px);
+  }
+  100% {
+      -webkit-filter: blur(4px);
+      -moz-filter: blur(4px);
+      -o-filter: blur(4px);
+      -ms-filter: blur(4px);
+      filter: blur(4px);
+  }
+}
+
 /***************Input styling**************/
 .input-group { 
  position:relative; 
@@ -117,10 +153,12 @@ input:focus ~ .input-bar:before {
  width:100%;
 }
 /***********************************/
-/* .disappear {
-  transition: all 0.6s ease;
-  -webkit-transition: all 0.6s ease; 
-}*/
+.blur{
+  -webkit-animation: blur 1s forwards;
+  -moz-animation: blur 1s forwards;
+  -o-animation: blur 1s forwards;
+  animation: blur 1s forwards;
+}
 
 #logo-img {
  position: relative;
@@ -128,7 +166,7 @@ input:focus ~ .input-bar:before {
  margin-bottom: 30px;
 }
 #login-bg {
-  background: radial-gradient(circle, rgba(100,100,100,0.4) 5%, rgba(0,0,0,0.8) 100%), url(images/mainScreen.png) no-repeat;
+  background: radial-gradient(circle, rgba(100,100,100,0.4) 5%, rgba(0,0,0,0.85) 100%), url(images/mainScreen.png) no-repeat;
   background-size: 130%;
   background-position: 50% 62%;
   object-fit: contain;
@@ -172,16 +210,60 @@ input:focus ~ .input-bar:before {
 #login-btn, #register-btn{
  margin-top: 40px;
  width: 300px;
- height: 40px;
+ height: 45px;
  border: none;
  border-radius: 10px;
- background-color: #3b68ff;
+ background: #111;
  color:white;
  font-size: 1em;
  font-weight: bold;
  letter-spacing: 1px;
  text-align: center;
  color: #ffffff;
+ cursor: pointer;
+ position: relative;
+ z-index: 0;
+ -webkit-transition: all .3s ease;
+ transition: all .3s ease;
+}
+
+#login-btn:before, #register-btn:before {
+    content: '';
+    background: linear-gradient(45deg,#ff00c8, #00ffd5, #002bff, #7a00ff, #ff00c8);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+#login-btn:hover:before, #register-btn:hover:before {
+  opacity: 1;
+} 
+#login-btn:after, #register-btn:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  -webkit-transition: all .3s ease;
+ transition: all .3s ease;
+}
+#login-btn:hover:after, #register-btn:hover:after{
+  background: #111;
+}
+#login-btn:active, #register-btn:active {
+  outline: none;
 }
 
 ul {
@@ -193,6 +275,12 @@ li {
  margin-left: 20px;
 }
 
+/**********************Registration 1***********************/
+#reg-container {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; 
+}
 /************Footer***********/
 footer {
  color: #8e8e8e;

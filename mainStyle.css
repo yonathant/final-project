@@ -8,6 +8,7 @@ body {
  height: 100vh;
  letter-spacing: 0.5px;
  overflow: hidden;
+ background-color: black;
 }
 #container {
  min-width: 1300px;

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  AOS.init();
 
 /*******Typing words******/
 // get the element
@@ -118,5 +119,14 @@ $(".form-slider:first").show();
   $("#"+activeTab).fadeIn();
  });
 
+ $('#register-btn').click(function(){
+  $(".disappear").fadeOut(1000);
+  setTimeout(function(){
+    $("body").load("registration.html #container");
+}, 2000);
+  // $("#login").animate({opacity: 1},4000);
+  // $('#container').hide().load("registration.html #container").fadeIn('500');
+  // $( "body" ).load( "registration.html #container" );
+});
 
 });

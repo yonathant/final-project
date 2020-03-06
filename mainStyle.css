@@ -13,9 +13,6 @@ body {
 #container {
  min-width: 1300px;
  height: 100%;
- background: radial-gradient(circle, rgba(100,100,100,0.4) 5%, rgba(0,0,0,0.8) 100%), url(images/mainScreen.png) no-repeat;
- background-size: 130%;
- background-position: 50% 62%;
 }
 h1 {
  font-size: 2em;
@@ -124,6 +121,15 @@ input:focus ~ .input-bar:before {
  position: relative;
  width: 50px;
  margin-bottom: 30px;
+}
+#login-bg {
+  background: radial-gradient(circle, rgba(100,100,100,0.4) 5%, rgba(0,0,0,0.8) 100%), url(images/mainScreen.png) no-repeat;
+  background-size: 130%;
+  background-position: 50% 62%;
+  object-fit: contain;
+  height: 100%;
+  -webkit-filter: blur(24.7px);
+  filter: blur(24.7px);
 }
 #login {
  color: white;

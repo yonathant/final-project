@@ -120,7 +120,7 @@ $(".form-slider:first").show();
 
  $('#register-btn').click(function(){
   $("#login-bg").addClass("fadeOut");
-  $(".disappear").fadeOut(700);
+  // $(".disappear").fadeOut(700);
   setTimeout(function(){
     $("body").load("registration.html #container");
 }, 1500);

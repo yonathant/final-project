@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="open_sans_hebrew/stylesheet.css" rel="stylesheet"/>
+ <link rel="stylesheet" href="mainStyle.css"/>
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="jScript/jquery.js"></script>
+ <title>BioIT</title>
+</head>
+<body>
+ <div id="container">
+  <div id="login-bg2">
+  <img id="logo-img" src="images/logo.svg" alt="logo bioit">
+  <div id="login">
+  <div id="reg-container">
+    <div id="progBar"></div>
+
+    <section id="section1" class="disappear">
+      <h1>היי איך קוראים לך?</h1>
+      <input id="name" type="text" placeholder="הקלד כאן">
+      <div id="gender" class="toggle">
+        <input type="checkbox"/>
+        <label></label>
+      </div>
+    </section>
+
+    <section id="section2" class="disappear">
+     <h1>כמה שנות נסיון אקדמי יש לך?</h1>
+     <ul class="dropdown">
+       <li>0-5</li>
+       <li>5-10</li>
+       <li>10-15</li>
+       <li>15-20</li>
+       <li>20+</li>
+    </ul>
+    </section>
+
+    <section id="section3" class="disappear">
+     <h1>מהי ההשכלה שלך?</h1>
+     <ul class="dropdown">
+       <li>תואר ראשון</li>
+       <li>תואר שני</li>
+       <li>תואר שני במסלול תזה</li>
+       <li>דוקטור</li>
+       <li>פרופסור</li>
+     </ul>
+    </section>
+
+    <section id="section4" class="disappear">
+      <h1>מהו תפקידך במכון?</h1>
+      <input id="job" type="text" placeholder="הקלד כאן">
+      <h2>מתעסק/ת במחקר?</h2>
+      <button>כן</button>
+      <button>לא, דלג</button>
+    </section>
+
+    <section id="section5" class="disappear">
+      <h1>מהי הפקולטה שלך?</h1>
+      <ul class="faculty-nav">
+        <li>ניהול טכנולוגיה</li>
+        <li>הנדסה</li>
+        <li>עיצוב</li>
+        <li>טל"מ</li>
+        <li>מדעים</li>
+        <li>רב תחומי</li>
+        <li>תעודה</li>
+        <li>מכינות</li>
+      </ul>
+      <div id="lecture-alert">
+        <h2>האם הנך מרצה בקורסים מסויימים?</h2>
+        <button>כן, בחר קורסים</button>
+        <button>לא, דלג</button>
+      </div>
+      <div id="course-container">
+        <div id="course-list">
+          <h3>רשימת קורסים</h3>
+          <hr>
+          <ul class="courses">
+            <li>עיצוב ממשק משתמש</li>
+            <li>פיתוח אתרי אינטרנט</li>
+            <li>פסיכולוגיה ותיאוריות למידה א</li>
+            <li>פסיכולוגיה ותיאוריות למידה ב</li>
+            <li>פרזנטציות אפקטיביות: תכנון, עיצוב, הצגה</li>
+            <li>מבוא לתכנות</li>
+            <li>מבוא לסוציולוגיה של עידן המידע</li>
+            <li>מבוא לסביבות אינטראקטיביות</li>
+            <li>שיטות מחקר במד"ח</li>
+            <li>תכנות אינטראקטיבי</li>
+            <li>תקשורת בעולם הטכנולוגי</li>
+            <li>מבוא לתקשורת חזותית</li>
+            <li>מבוא לסביבות אינטראקטיביות</li>
+            <li>מבוא למחשבים ותקשוב</li>
+            <li>טכנולוגיה במדיה החדשה</li>
+            <li>מבוא לבסיסי נתונים</li>////
+            <li>טכנולוגיה במדיה החדשה</li>
+            <li>התנהגות ארגונית לטל"מ</li>
+            <li>הנגשת אתרי אינטרנט</li>
+            <li>החוק, תקשוב וקניין רוחני</li>
+            <li>גרפיקה ממוחשבת לטל"מ</li>
+            <li>ארגון ויצוג ידע</li>
+            <li>אפיון ממשק וחווית משתמש</li>
+          </ul>
+        </div>
+        <div id="course-fav">
+          <h3>הקורסים שנבחרו</h3>
+          <hr>
+          <ul></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="section6" class="disappear">
+      <h1></h1>
+      <h2></h2>
+      <h3>סטטוס:</h3>
+      <input type="text" placeholder="רשום כמה מילים על עצמך…">
+      <hr>
+      <h4>השכלה:</h4>
+      <p></p>
+      <h4>נסיון אקדמי</h4>
+      <p></p>
+      <h4>תפקיד:</h4>
+      <p></p>
+      <h4>מרצה בקורסים:</h4>
+      <p></p>
+     </section>
+  </div>
+  <button id="nextButton"></button>
+  </div>
+  <footer>
+    <ul>
+      <li>אודות</li>
+      <li>מידע נוסף</li>
+      <li>הגדרות</li>
+      <li>כל הזכויות שמורות</li>
+    </ul>
+  </footer>
+</div>
+</body>
+
+</html>

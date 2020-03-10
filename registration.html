@@ -5,8 +5,6 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link href="open_sans_hebrew/stylesheet.css" rel="stylesheet"/>
  <link rel="stylesheet" href="mainStyle.css"/>
- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
  <script src="jScript/jquery.js"></script>
  <title>BioIT</title>
@@ -16,18 +14,18 @@
   <div id="login-bg2">
   <img id="logo-img" src="images/logo.svg" alt="logo bioit">
   <div id="login">
+  <div id="progBar" class="fadeIn"></div>
   <div id="reg-container">
-    <div id="progBar"></div>
     <section id="section1">
-      <h1>היי, איך קוראים לך?</h1>
-      <input id="name" type="text" placeholder="הקלד כאן">
+      <h1 id="questionTxt">היי, איך קוראים לך?</h1>
+      <input id="ansInput" type="text" placeholder="הקלד שם">
       <div class="toggle">
         <input type="checkbox"/>
         <label></label>
       </div>
     </section>
   </div>
-  <button id="nextButton">הבא</button>
+  <button id="nxtBtn1" class="nextButton fadeIn">הבא</button>
   </div>
   <footer>
     <ul>

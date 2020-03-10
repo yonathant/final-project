@@ -1,7 +1,9 @@
 $(document).ready(function(){
-  AOS.init();
-/*******Typing words******/
-// get the element
+
+if (window.location.pathname == "/index.html") { // only if on login page
+
+/*******Typer******/
+  // get the element
 const text = document.querySelector('.type-it');
 // words
 const words = [
@@ -70,7 +72,6 @@ function setTyper(element, words) {
 
   }
 }
-
  
  /******login slider******/
  //var
@@ -86,7 +87,7 @@ function setTyper(element, words) {
  liPos = $activeLi.position().left;
  }
  refresh();
-
+ 
  //line setup
  function lineSet() {
  $line.css({
@@ -108,6 +109,7 @@ function setTyper(element, words) {
  refresh();
  lineSet();
  });
+ }
 /**********************/
 $(".form-slider").hide();
 $(".form-slider:first").show();
@@ -123,6 +125,41 @@ $(".form-slider:first").show();
   // $(".disappear").fadeOut(700);
   setTimeout(function(){
     $("body").load("registration.html #container");
-}, 1500);
-});
+    history.pushState(null, null, 'registration.html');
+  }, 1500);
+  });
+
+  $(document).on('click','#nxtBtn1',function(){
+    $("#section1").addClass("fadeUpOut");
+    setTimeout(function(){
+      $("body").load("registration2.html #container");
+      history.pushState(null, null, 'registration2.html');
+    }, 1500);
+    });
+  $(document).on('click','#nxtBtn2',function(){
+    $("#section2").addClass("fadeUpOut");
+    setTimeout(function(){
+      $("body").load("registration3.html #container");
+      history.pushState(null, null, 'registration3.html');
+    }, 1500);
+    });
+    $(document).on('click','#nxtBtn3',function(){
+      $("#section3").addClass("fadeUpOut");
+      setTimeout(function(){
+        $("body").load("registration7.html #container");
+        history.pushState(null, null, 'registration7.html');
+      }, 1500);
+      });
+
+  /***********DropDown*********/
+  $(document).on('click','.dropdown',function () {
+    $(this).attr('tabindex', 1).focus();
+    $(this).toggleClass('open');
+    $(this).find('.dropdown-menu').slideToggle(300);
+  });
+  $(document).on('click','.dropdown .dropdown-menu li',function () {
+    $(this).parents('.dropdown').find('span').text($(this).text());
+    $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
+  });
+
 });

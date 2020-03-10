@@ -27,13 +27,15 @@ h2 {
 label,input {
  display: block;
  margin-left: 20px;
+ font-family: 'Open Sans Hebrew', sans-serif;
+ line-height: 1.5;
 }
 
 form {  
  margin-top: 40px;
 }
 
-/***************Text flip animation********/
+/***************KeyFrames********/
 .type-it::after {
  content: "|";
  animation: blink ease 1s infinite;
@@ -65,6 +67,16 @@ form {
       transform: translateY(0);
    } 
   }
+  @keyframes fadeOutAnimation { 
+    0% { 
+        opacity: 1;
+        transform: translateY(0px);
+    } 
+    100% { 
+        opacity: 0; 
+        transform: translateY(-80px);
+     } 
+    }
 @keyframes RegularFadeAnimation { 
   0% { 
       opacity: 0;
@@ -97,7 +109,26 @@ form {
       filter: blur(20px);
   }
 }
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #ccc; }
+}
 
+.fadeIn {
+  animation: fadeInAnimation ease 1.4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; 
+}
+.fadeOut {
+  animation: fadeOut ease 1.4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; 
+}
+.fadeUpOut {
+  animation: fadeOutAnimation ease 1.4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
 /***************Input styling**************/
 .input-group { 
  position:relative; 
@@ -117,13 +148,13 @@ input:focus {
  outline: none; 
  border-bottom: 1px solid rgba(59, 104, 255, 0);
  transition:1.2s; 
- -moz-transition:1.2s; 
+ -moz-transition:1.2s;
  -webkit-transition:1.2s;
 }
 
 /* LABEL ======================================= */
 label {
- color:#7e7e7e; 
+ color:#7e7e7e;
  font-size: 1em;
  font-weight: normal;
  position: absolute;
@@ -260,7 +291,7 @@ input:focus ~ .input-bar:before {
 
 #login-btn:before, #register-btn:before {
     content: '';
-    background: linear-gradient(45deg,#002bff, #00ffd5, #ff00c8, #7a00ff, #002bff);
+    background: linear-gradient(45deg,#002bff, #00b7ff, #002bff);
     position: absolute;
     top: -2px;
     left:-2px;
@@ -304,40 +335,87 @@ li {
  display: inline-block;
  margin-left: 20px;
 }
+/**********************Main Registration style**************/
+#section1, #section2, #section3, #section7 {
+  padding: 40px 150px 0 0;
+  height: 600px;
+  max-height: 100vh;
+}
 
-/**********************Registration 1***********************/
+#progBar {
+  width: 110%;
+  min-width: 70%;
+  height: 20px;
+  border-radius: 10px;
+  border: solid 1px #707070;
+  margin-right: 150px;
+  margin-top: -50px;
+}
 #reg-container {
-    animation: fadeInAnimation ease 1.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards; 
-}
-.fadeOut {
-  animation: fadeOut ease 1.4s;
+  animation: fadeInAnimation ease 1.4s;
   animation-iteration-count: 1;
-  animation-fill-mode: forwards; 
+  animation-fill-mode: forwards;
 }
-#section1 {
-  padding: 50px 150px 0 0;
+#questionTxt {
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 1.35;
+  letter-spacing: 1.3px;
+  margin-bottom: 10px;
 }
-/************Footer***********/
-footer {
- color: #8e8e8e;
- position: absolute;
- bottom: 0;
- margin-right: 70px;
+#ansInput {
+  font-weight: 300;
+  color: #444444;
+  font-size: 30px;
+  line-height: 1.40;
+  padding: 0 2px 0 0;
+  letter-spacing: 1.5px;
+  border: none;
+  border-right: 1px solid #ccc;
+  margin-top: 10px;
+  animation: blink-caret 1s step-end infinite;
+}
+#ansInput:focus {
+  color: #ccc;
+  animation: none;
+  border: none;
 }
 
+.nextButton {
+  position: relative;
+  bottom: 100px;
+  margin-right: 150px;
+  width: 130px;
+  height: 40px;
+  border-radius: 10px;
+  border: solid 1px #1592e6;
+  font-size: 18px;
+  color: white;
+  background: none;
+  font-family: 'Open Sans Hebrew', sans-serif;
+  cursor: pointer;
+  display: block;
+  -webkit-transition: all .3s ease;
+ transition: all .3s ease;
+}
+.nextButton:hover {
+  background: #3B68FF;
+  color: black;
+}
+.nextButton:focus {
+  outline: none;
+}
 
 /*************Toggle*************/
 .toggle {
   display: inline-block;
   position: relative;
   border-radius: 40px;
-  height: 50px;
-  width: 125px;
+  height: 40px;
+  width: 90px;
   margin-top: 40px;
-  border: 2px solid gray;
-  background: #111;
+  border: 1px solid gray;
+  background: rgba(17, 17, 17, 0.5);
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
 }
@@ -356,11 +434,11 @@ footer {
   cursor: pointer;
 }
 .toggle label {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   position: absolute;
   border-radius: 50%;
-  border: 5px solid #2752dd;
+  border: 3px solid #2752dd;
   right: 0;
   top: 0;
   -webkit-transition: border 0.2s ease-out , right 0.2s ease-out , -webkit-transform 0.25s 0.2s ease-out;
@@ -372,8 +450,8 @@ footer {
 }
 
 .toogle input:focus ~ label, .toggle input:valid ~ label {
-  top: -2px;
-  right: -2px;
+  top: -1px;
+  right: -1px;
 }
 
 .toggle label:after {
@@ -381,8 +459,8 @@ footer {
   position: absolute;
   left: 50%;
   top: 100%;
-  width: 5px;
-  height: 25px;
+  width: 3px;
+  height: 20px;
   background: #2752dd;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -392,12 +470,12 @@ footer {
 .toggle label:before {
   content: '';
   position: absolute;
-  border-bottom: 5px solid #2752dd;
-  border-right: 5px solid #2752dd;
-  top: 35px;
-  left: 7px;
-  width: 25px;
-  height: 25px;
+  border-bottom: 3px solid #2752dd;
+  border-right: 3px solid #2752dd;
+  top: 32px;
+  left: 6px;
+  width: 19px;
+  height: 19px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   -webkit-transition: 0.2s ease-out;
@@ -405,18 +483,147 @@ footer {
 }
 .toggle input:checked + label {
   border-color: #fc2695;
-  right: 75px;
+  right: 50px;
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
 }
 .toggle input:checked + label:after {
   background: #fc2695;
-  height: 35px;
+  height: 20px;
 }
 .toggle input:checked + label:before {
   border-right: none;
   border-color: #fc2695;
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
-  top: 32px;
+  top: 25px;
+  left: 7px;
 }
+
+/*************DropDown*********/
+
+.dropdown {
+  width: 300px;
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 25px 4px rgba(255,255,243,0.07);
+  transition: all .3s ease-in-out;
+  position: relative;
+  color: #666;
+  outline: none;
+  font-weight: 300;
+  margin-top: 10px;
+  border: 1px solid #222;
+}
+.dropdown .select {
+    cursor: pointer;
+    display: block;
+    padding: 12px 30px;
+}
+.dropdown:hover {
+  box-shadow: 0 0 4px #24a1f5;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(255,255,255,0.04) 100%);
+}
+
+.dropdown .dropdown-menu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    margin-top: 1px;
+    border-radius: 0px 0px 5px 5px;
+    overflow: hidden;
+    display: none;
+    overflow-y: auto;
+    z-index: 9;
+    box-shadow: inset 0px 0px 35px 20px rgba(255,255,243,0.04);
+    border: 1px solid #222;
+    padding: 0;
+    list-style: none;
+}
+.dropdown .dropdown-menu li, .select>span{
+    padding: 12px 30px;
+    margin: 0;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    color: #ccc;
+    font-size: 20px;
+} 
+.dropdown li {
+  display: block;
+}
+.dropdown li:hover {
+  box-shadow: inset 0px 0px 20px 10px rgba(255,255,243,0.07);
+}
+.dropdown.open {
+  border-radius: 5px 5px 0px 0px;
+}
+
+/************Profile Section (7)**********/
+#profileImg {
+  background: url(images/picUpload.png) no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: 3px solid #bbb;
+}
+#personalInfo {
+  display: flex;
+}
+.block {
+  display: block;
+  margin-right: 20px;
+}
+#nameTag {
+  margin: 0;
+  font-weight: 400;
+  font-size: 40px;
+  color: #ccc;
+}
+#title {
+  display: block;
+  margin: 0;
+  font-weight: 300;
+  font-size: 30px;
+  color: #ccc;
+  line-height: 25px;
+}
+#status {
+  display: block;
+  margin-top: -25px;
+}
+#status h3, #status input{
+  font-size: 20px;
+  display: inline-block;
+}
+#status input {
+  color: #666;
+  font-weight: 300;
+  border: none;
+}
+#status input:focus {
+  color: #ccc;
+}
+
+hr {
+  border: solid 0.4px #707070;
+  width: 60%;
+  margin: 0;
+}
+.infoGroup {
+  color: #ccc;
+  font-size: 20px;
+  letter-spacing: 1px;
+  height: 45px;
+}
+.infoGroup h4, .infoGroup p {
+  display: inline-block;
+}
+/************Footer***********/
+footer {
+  color: #8e8e8e;
+  position: absolute;
+  bottom: 0;
+  margin-right: 70px;
+ }

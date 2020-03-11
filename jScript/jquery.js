@@ -1,7 +1,11 @@
+// Document is ready
 $(document).ready(function(){
+  window.onbeforeunload = function(){
+    if (window.location.pathname == "/registration.html")
+        return true;
+}
 
-if (window.location.pathname == "/index.html") { // only if on login page
-
+if (window.location.pathname == "/index.html" || window.location.pathname == "/") { // only if on login page
 /*******Typer******/
   // get the element
 const text = document.querySelector('.type-it');
@@ -110,6 +114,7 @@ function setTyper(element, words) {
  lineSet();
  });
  }
+
 /**********************/
 $(".form-slider").hide();
 $(".form-slider:first").show();

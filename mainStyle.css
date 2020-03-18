@@ -414,7 +414,6 @@ li {
 }
 .nextButton:hover {
   background: #3B68FF;
-  color: black;
 }
 .nextButton:focus {
   outline: none;
@@ -642,6 +641,18 @@ hr {
 .infoGroup h4, .infoGroup p {
   display: inline-block;
 }
+
+/*************About Page*************/
+.about-page h1, .about-page h2 {
+  margin: 5px;
+}
+.about-page p {
+  line-height: 2em;
+}
+.about-page img {
+  width: 100px;
+}
+
 /************Footer***********/
 footer {
   color: #8e8e8e;

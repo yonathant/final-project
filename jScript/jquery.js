@@ -1,11 +1,11 @@
 // Document is ready
 $(document).ready(function(){
   window.onbeforeunload = function(){
-    if (window.location.pathname != "/index.html")
+    if (window.location.pathname == "/registration.html" || window.location.pathname == "/registration2.html")
         return true;
   }
 
-if (window.location.pathname == "../index.html" || window.location.pathname == "/") { // only if on login page
+if (window.location.pathname == "/index.html" || window.location.pathname == "/") { // only if on login page
 /*******Typer******/
   // get the element
 const text = document.querySelector('.type-it');

@@ -733,7 +733,7 @@ and (min-width: 375px) and (max-width: 767px) {
   .nextButton {
     right: 50%;
     margin-right: -65px;
-    bottom: 95px;
+    bottom: 120px;
   }
   .infoGroup {
     text-align: right;

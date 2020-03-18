@@ -5,7 +5,7 @@ $(document).ready(function(){
         return true;
   }
 
-if (window.location.pathname == "/index.html" || window.location.pathname == "/") { // only if on login page
+if (window.location.pathname == "/index.html" || window.location.pathname == "/" || window.location.pathname == "/final-project/") { // only if on login page
 /*******Typer******/
   // get the element
 const text = document.querySelector('.type-it');

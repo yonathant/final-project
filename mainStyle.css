@@ -672,12 +672,15 @@ footer {
 
 
 @media only screen 
-and (min-width: 414px) and (max-width: 767px) {
+and (min-width: 375px) and (max-width: 767px) {
+  h1,h2 {
+    font-size: 1.9em;
+  }
   #container {
-    min-width: 414px;
+    min-width: 375px;
   }
   #login {
-    padding: 150px 20px 0 20px;
+    padding: 150px 10px 0 10px;
     width: 100%;
     text-align: center;
   }
@@ -721,13 +724,16 @@ and (min-width: 414px) and (max-width: 767px) {
   #section1, #section2, #section3, #section7 {
     padding: 20px 0;
   }
+  #questionTxt {
+    font-size: 40px;
+  }
   .toggle {
     margin-top: 60px;
   }
   .nextButton {
     right: 50%;
     margin-right: -65px;
-    bottom: 70px;
+    bottom: 90px;
   }
   .infoGroup {
     text-align: right;

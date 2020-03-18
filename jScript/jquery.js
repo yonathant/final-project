@@ -1,11 +1,11 @@
 // Document is ready
 $(document).ready(function(){
   window.onbeforeunload = function(){
-    if (window.location.pathname == "/registration.html")
+    if (window.location.pathname != "/index.html")
         return true;
-}
+  }
 
-if (window.location.pathname == "/index.html" || window.location.pathname == "/") { // only if on login page
+if (window.location.pathname == "../index.html" || window.location.pathname == "/") { // only if on login page
 /*******Typer******/
   // get the element
 const text = document.querySelector('.type-it');
@@ -136,6 +136,7 @@ $(".form-slider:first").show();
 
   $(document).on('click','#nxtBtn1',function(){
     $("#section1").addClass("fadeUpOut");
+    $("#progBar>div").animate({ width: "20%" }, 1000);
     setTimeout(function(){
       $("body").load("registration2.html #container");
       history.pushState(null, null, 'registration2.html');
@@ -143,6 +144,7 @@ $(".form-slider:first").show();
     });
   $(document).on('click','#nxtBtn2',function(){
     $("#section2").addClass("fadeUpOut");
+    $("#progBar>div").animate({ width: "40%" }, 1000);
     setTimeout(function(){
       $("body").load("registration3.html #container");
       history.pushState(null, null, 'registration3.html');
@@ -150,6 +152,7 @@ $(".form-slider:first").show();
     });
     $(document).on('click','#nxtBtn3',function(){
       $("#section3").addClass("fadeUpOut");
+      $("#progBar>div").animate({ width: "100%" }, 1000);
       setTimeout(function(){
         $("body").load("registration7.html #container");
         history.pushState(null, null, 'registration7.html');

@@ -10,6 +10,10 @@ body {
  overflow: hidden;
  background-color: black;
 }
+a {
+  text-decoration: none;
+  color: #ccc;
+}
 #container {
  min-width: 1300px;
  height: 100%;
@@ -50,7 +54,7 @@ form {
 }
 @keyframes glowing {
   0% { background-position: 0 0; }
-  50% { background-position: 400% 0; }
+  50% { background-position: 300% 0; }
   100% { background-position: 0 0; }
 }
 
@@ -275,7 +279,8 @@ input:focus ~ .input-bar:before {
  height: 45px;
  border: none;
  border-radius: 10px;
- background: #111;
+ background: linear-gradient(45deg,#002bff, #4a74ff, #002bff);
+ background-size: 300%;
  color:white;
  font-size: 1em;
  font-weight: bold;
@@ -289,7 +294,7 @@ input:focus ~ .input-bar:before {
  transition: all .3s ease;
 }
 
-#login-btn:before, #register-btn:before {
+/* #login-btn:before, #register-btn:before {
     content: '';
     background: linear-gradient(45deg,#002bff, #00b7ff, #002bff);
     position: absolute;
@@ -303,12 +308,11 @@ input:focus ~ .input-bar:before {
     opacity: 1;
     transition: all .2s ease-in-out;
     border-radius: 10px;
-}
-#login-btn:hover:before, #register-btn:hover:before {
-  animation: glowing 20s linear infinite;
-  filter:blur(8px);
+} */
+#login-btn:hover, #register-btn:hover {
+  animation: glowing 10s linear infinite;
 } 
-#login-btn:after, #register-btn:after {
+/* #login-btn:after, #register-btn:after {
   z-index: -1;
   content: '';
   position: absolute;
@@ -323,7 +327,7 @@ input:focus ~ .input-bar:before {
 }
 #login-btn:hover:after, #register-btn:hover:after{
   background: #111;
-}
+} */
 #login-btn:active, #register-btn:active {
   outline: none;
 }
@@ -352,6 +356,15 @@ li {
   margin-right: 150px;
   margin-top: -50px;
 }
+#progBar>div {
+  background: linear-gradient(90deg, rgba(23,146,230,1) 0%, rgba(0,57,96,1) 100%);
+  height: 100%;
+  border-radius: 10px;
+  width: 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
 #reg-container {
   animation: fadeInAnimation ease 1.4s;
   animation-iteration-count: 1;
@@ -407,7 +420,7 @@ li {
   outline: none;
 }
 
-/*************Toggle*************/
+/*************Toggle Male Female*************/
 .toggle {
   display: inline-block;
   position: relative;
@@ -502,7 +515,6 @@ li {
 }
 
 /*************DropDown*********/
-
 .dropdown {
   width: 300px;
   display: inline-block;
@@ -558,6 +570,15 @@ li {
 }
 .dropdown.open {
   border-radius: 5px 5px 0px 0px;
+}
+.down-arrow {
+  position: absolute;
+  left: 40px;
+  top: 20px;
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 12px solid #ccc;
 }
 
 /************Profile Section (7)**********/

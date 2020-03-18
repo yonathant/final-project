@@ -699,7 +699,7 @@ and (min-width: 375px) and (max-width: 767px) {
     background: none;
   }
   #login-ul {
-    margin-top: 45px;
+    margin-top: 35px;
   }
   #login-ul li{
     margin: 0 10px;

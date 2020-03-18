@@ -1,13 +1,16 @@
 * { box-sizing:border-box; }
+html, body {
+  overflow-x: hidden;
+}
 html {
  direction: rtl;
 }
 body {
+ position: relative;
  font-family: 'Open Sans Hebrew', sans-serif;
  margin: 0;
  height: 100vh;
  letter-spacing: 0.5px;
- overflow: hidden;
  background-color: black;
 }
 a {
@@ -660,3 +663,88 @@ footer {
   bottom: 0;
   margin-right: 70px;
  }
+ footer ul {
+  display: inline-block;
+ }
+ footer span {
+   display: inline;
+ }
+
+
+@media only screen 
+and (min-width: 414px) and (max-width: 767px) {
+  #container {
+    min-width: 414px;
+  }
+  #login {
+    padding: 150px 20px 0 20px;
+    width: 100%;
+    text-align: center;
+  }
+  #logo-img {
+    left: 50%;
+    width: 60px;
+    margin-left: -25px;
+    margin-right: 0;
+  }
+  #login-bg, #login-bg2 {
+    background: url(images/mainScreen2.png) no-repeat;
+    background-size: auto;
+    background-position: 40% 60%;
+  }
+  .login-shadow {
+    background: none;
+  }
+  #login-ul {
+    margin-top: 45px;
+  }
+  #login-ul li{
+    margin: 0 10px;
+  }
+  #regtab, #logintab {
+    margin-top: 60px;
+  }
+  input {
+    margin: 30px auto 0 auto;
+  }
+  label {
+    right: 40px;
+  }
+  .input-bar {
+    right: -115px;
+  }
+  /******Registration page 1**********/
+  #progBar {
+    margin: 0;
+    width: 100%;
+  }
+  #section1, #section2, #section3, #section7 {
+    padding: 20px 0;
+  }
+  .toggle {
+    margin-top: 60px;
+  }
+  .nextButton {
+    right: 50%;
+    margin-right: -65px;
+    bottom: 70px;
+  }
+  .infoGroup {
+    text-align: right;
+  }
+  /******Footer*******/
+  footer {
+    margin: 0;
+    min-width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+  footer ul {
+    display: flex;
+    justify-content: center;
+  }
+  footer ul li{
+    margin: 0;
+    padding: 0 20px;
+  }
+}

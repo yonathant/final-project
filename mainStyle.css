@@ -733,10 +733,18 @@ and (min-width: 375px) and (max-width: 767px) {
   .nextButton {
     right: 50%;
     margin-right: -65px;
-    bottom: 90px;
+    bottom: 95px;
   }
   .infoGroup {
     text-align: right;
+  }
+
+  /******about page*******/
+  .about-page hr {
+    margin: 0 auto;
+  }
+  .about-page img {
+    width: 50px;
   }
   /******Footer*******/
   footer {
@@ -752,5 +760,8 @@ and (min-width: 375px) and (max-width: 767px) {
   footer ul li{
     margin: 0;
     padding: 0 20px;
+  }
+  footer span {
+    display: none;
   }
 }

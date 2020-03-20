@@ -5,7 +5,9 @@ $(document).ready(function(){
         return true;
   }
 
-if (window.location.pathname == "/index.html" || window.location.pathname == "/" || window.location.pathname == "/final-project/") { // only if on login page
+
+// only if on login page
+if (window.location.pathname == "/index.html" || window.location.pathname == "/" || window.location.pathname == "/final-project/"|| indow.location.pathname == "/final-project/index.html" || window.location.pathname == "/index.html#") {
 /*******Typer******/
   // get the element
 const text = document.querySelector('.type-it');
@@ -79,7 +81,7 @@ function setTyper(element, words) {
  
  /******login slider******/
  //var
- var $nav = $('#login-nav'),
+ var $nav = $('#login-ul'),
  $line = $('<div>').appendTo($nav),
  $activeLi,
  lineWidth,

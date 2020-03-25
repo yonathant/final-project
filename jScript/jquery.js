@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 
 // only if on login page
-if (window.location.pathname == "/index.html" || window.location.pathname == "/" || window.location.pathname == "/final-project/"|| indow.location.pathname == "/final-project/index.html" || window.location.pathname == "/index.html#") {
+if (window.location.pathname == "/index.html" || window.location.pathname == "/" || window.location.pathname == "/final-project/" || window.location.pathname == "/index.html#") {
 /*******Typer******/
   // get the element
 const text = document.querySelector('.type-it');

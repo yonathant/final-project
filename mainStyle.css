@@ -223,7 +223,6 @@ input:focus ~ .input-bar:before {
 }
 #login-bg {
   background: radial-gradient(circle, rgba(100,100,100,0.4) 5%, rgba(0,0,0,0.85) 100%), url(images/mainScreen.png) no-repeat;
-  background-size: 110%;
   background-position: 50% 60%;
   object-fit: contain;
   height: 100%;
@@ -233,7 +232,6 @@ input:focus ~ .input-bar:before {
 }
 #login-bg2 {
   background: url(images/mainScreen2.png) no-repeat;
-  background-size: 110%;
   background-position: 50% 60%;
   object-fit: contain;
   height: 100%;
@@ -244,7 +242,7 @@ input:focus ~ .input-bar:before {
   width: 70%;
   max-height: 100%;
   padding-top: 150px;
-  padding-bottom: 20%;
+  padding-bottom: 50vh;
 }
 .login-shadow {
   background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.95) 60%); /* FF3.6-15 */

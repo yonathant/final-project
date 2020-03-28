@@ -106,7 +106,7 @@ function setTyper(element, words) {
  'width':lineWidth
  }, 200);
  }
- lineSet();  
+ lineSet();
 
  //on click
  $nav.find('a').on('click', function() {

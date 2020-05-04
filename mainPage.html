@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link href="open_sans_hebrew/stylesheet.css" rel="stylesheet" />
+  <link rel="stylesheet" href="mainStyle.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/ico" sizes="16x16" />
+  <script src="https://kit.fontawesome.com/c7e0c6bf72.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+  <script src="jScript/auth.js"></script>
+  <script src="jScript/jquery.js"></script>
+  <title>BioIT</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div id="container">
+      <nav>
+        <div id="mySection">
+          <div id="navPersonalInfo">
+            <div class="profilePic"></div>
+            <p>
+              <span class="fName">ד"ר בוריס</span>
+              <span class="lName">אפטר</span>
+            </p>
+          </div>
+          <div class="align-left">
+            <i class="fas fa-chevron-down"></i>
+            <i class="far fa-envelope"></i>
+            <i class="far fa-bell"></i>
+          </div>
+        </div>
+        <div id="facultySection">
+          <ul>
+            <li><a href="">ניהול טכנולוגיה</a></li>
+            <li><a href="">הנדסה</a></li>
+            <li><a href="">עיצוב</a></li>
+            <li><a href="">טל"מ</a></li>
+            <li><a href="">מדעים</a></li>
+            <li><a href="">רב תחומי</a></li>
+            <li><a href="">תואר שני</a></li>
+            <li><a href="">תעודה</a></li>
+            <li><a href="">מכינה</a></li>
+          </ul>
+        </div>
+        <div id="searchSection">
+          <div class="input-group">
+            <input type="text" placeholder="חיפוש לפי שם או תחום עניין" />
+            <img src="images/search.svg" alt="search" />
+          </div>
+        </div>
+      </nav>
+
+      <div id="cards-container">
+        <div class="card">
+          <div class="upper-card-section">
+            <div class="profilePic cardPhoto"></div>
+            <h1>אורן בן אהרון</h1>
+            <h2>טכנולוגיות למידה</h2>
+            <hr>
+          </div>
+          <ul class="description">
+            <li class="role"><img src="images/book.svg" alt="role"><span>מרצה</span></li>
+            <li class="job"><img src="images/briefcase.svg" alt="job"><span>עוזר דקאן</span></li>
+            <li class="location"><img src="images/map-pin.svg" alt="location"><span>בנין 5 חדר 139</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

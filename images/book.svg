@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="21" viewBox="0 0 17 21">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:none;stroke:#1792e6;stroke-linecap:round;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="prefix__book" transform="translate(.5 .5)">
+        <path id="prefix__Path_1501" d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" class="prefix__cls-1" data-name="Path 1501" transform="translate(-4 -2)"/>
+        <path id="prefix__Path_1502" d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" class="prefix__cls-1" data-name="Path 1502" transform="translate(-4 -2)"/>
+    </g>
+</svg>

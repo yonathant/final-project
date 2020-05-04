@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="18.684" viewBox="0 0 21 18.684">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:none;stroke:#1792e6;stroke-linecap:round;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="prefix__briefcase" transform="translate(.5 .5)">
+        <rect id="prefix__Rectangle_164" width="20" height="14" class="prefix__cls-1" data-name="Rectangle 164" rx="2" transform="translate(0 3.684)"/>
+        <path id="prefix__Path_1499" d="M16 6.959V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v1.959" class="prefix__cls-1" data-name="Path 1499" transform="translate(-2 -3)"/>
+    </g>
+</svg>

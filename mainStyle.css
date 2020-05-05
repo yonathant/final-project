@@ -1,10 +1,10 @@
 * {
   box-sizing: border-box;
 }
-html,
+/* html,
 body {
   overflow: hidden;
-}
+} */
 html {
   direction: rtl;
 }
@@ -12,7 +12,7 @@ body {
   position: relative;
   font-family: "Open Sans Hebrew", sans-serif;
   margin: 0;
-  height: 100vh;
+  height: 100%;
   letter-spacing: 0.5px;
   background-color: black;
 }
@@ -21,7 +21,7 @@ a {
   color: #ccc;
 }
 #container {
-  min-width: 80%;
+  max-width: 80%;
   margin: 0 auto;
   height: 100%;
 }
@@ -734,11 +734,14 @@ i {
   background: rgba(42,56,88,1) ;
   background-image: url('./images/background.svg');
   background-size: cover;
-  background-position: fixed;
-  height: 100vh;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%;
 }
 nav {
   position: fixed;
+  right: 0;
+  z-index: 99;
   background-color: rgba(0, 0, 0, 0.95);
   height: 75px;
   width: 100%;
@@ -851,11 +854,13 @@ nav {
 }
 #cards-container {
   margin: 0 auto;
-  padding-top: 200px;
-  max-width: 78%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  padding-top: 160px;
+  max-width: 95%;
+  min-width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-rows: auto;
+  justify-items: center;
 }
 
 /*************Cards design***********/
@@ -864,7 +869,7 @@ nav {
 }
 .card {
   position: relative;
-  margin: 0 15px 100px 15px;
+  margin: 0 5px 80px 5px;
   color: white;
   width: 230px;
   height: 300px;
@@ -990,7 +995,7 @@ nav {
   opacity: 0;
 }
 .card:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
   -webkit-box-shadow: 0 15px 20px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0 15px 20px 0px rgba(0, 0, 0, 0.5);
 }

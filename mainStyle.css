@@ -21,7 +21,8 @@ a {
   color: #ccc;
 }
 #container {
-  min-width: 1300px;
+  min-width: 80%;
+  margin: 0 auto;
   height: 100%;
 }
 h1 {
@@ -763,7 +764,7 @@ nav {
   font-size: 18px;
 }
 #mySection i:hover {
-  color: #3b68ff;
+  color: #1792E6;
   cursor: pointer;
 }
 #navPersonalInfo {
@@ -810,6 +811,10 @@ nav {
   left: 0;
   top: 15px;
 }
+#facultySection ul {
+  display: flex;
+  justify-content: space-evenly;
+}
 #facultySection {
   position: relative;
   width: 55%;
@@ -819,14 +824,12 @@ nav {
 }
 #facultySection li {
   margin-left: 0;
-  padding: 0 10px;
 }
 #facultySection li a {
   font-size: 18px;
-  padding: 0 5px;
 }
 #facultySection li a:hover {
-  color: #3b68ff;
+  color: #1792E6;
 }
 
 #searchSection {
@@ -848,8 +851,11 @@ nav {
 }
 #cards-container {
   margin: 0 auto;
-  padding-top: 150px;
-  max-width: 1080px;
+  padding-top: 200px;
+  max-width: 78%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 /*************Cards design***********/
@@ -858,33 +864,136 @@ nav {
 }
 .card {
   position: relative;
+  margin: 0 15px 100px 15px;
   color: white;
-  width: 250px;
-  background-color: rgba(255, 255, 255, 0.7);
+  width: 230px;
+  height: 300px;
   border-radius: 10px;
+  transition: all ease-in-out 0.1s;
+  -webkit-box-shadow: 0 13px 18px -1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 13px 18px -1px rgba(0, 0, 0, 0.4);
 }
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .card {
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
-    background-color: rgba(255, 255, 255, 0.1);  
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    background: -webkit-radial-gradient(top, ellipse cover, #ffffff17 0%,#0f111830 100%);
   }
 }
 .cardPhoto {
-  position: relative;
+  position: absolute;
   margin: 0 auto;
-  top: -40px;
-  width: 90px;
-  height: 90px;
+  top: -55px;
+  right: 70px;
+  width: 110px;
+  height: 110px;
 }
+
+.circle-wrap{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  background-color:#585858;
+  -webkit-box-shadow: 0 0 15px 0 rgba(23, 146, 230, 0.7);
+  box-shadow: 0 0 15px 0 rgba(23, 146, 230, 0.7);
+  position: absolute;
+  top: 10px;
+  right: 20%;
+} 
+.circle-wrap, .circle-fill, .circle-half {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+@keyframes per{
+  0% {
+   transform: rotate(0deg);
+ }
+ 100% {
+   transform: rotate(180deg);
+ }
+}
+.circle-fill{
+  background-color: #1792E6;
+  position:absolute;
+  clip: rect(0px, 20px, 40px, 0px);
+  animation: per ease-in-out 2s; 
+  transform: rotate(180deg); 
+}
+.circle-half{
+  background-color: #585858;
+  position:absolute;
+  clip: rect(0px, 20px, 40px, 0px);
+  
+}
+.circle-per{ 
+  background-color: #282F3F;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 2.9;
+  font-size: 0.8em;
+  color: white;
+}
+
+.upper-card-section h1 {
+  font-size: 24px;
+  padding-top: 65px;
+} 
+.upper-card-section h2 {
+  font-size: 18px;
+}
+.card hr {
+  width: 90%;
+  margin: 20px auto;
+}
+
 
 .description {
   padding: 0 20px 20px 0;
+  margin: auto 0;
+  transition: all ease-in-out 0.2s;
 }
 .description li{
-  display: block;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+.description li span {
+  padding-right: 15px;
+  font-size: 18px;
 }
 
+.bottom-card-section {
+  position: relative;
+  overflow: hidden;
+}
+.status-txt {
+  position: relative;
+  font-size: 18px;
+  font-style: italic;
+  color: #1792E6;
+  text-align: center;
+  opacity: 0;
+  margin-top: -30px;
+  transition: all ease-in-out 0.2s;
+}
+
+.card:hover .status-txt {
+  transform: translateY(-70px);
+  opacity: 1;
+}
+.card:hover .description {
+  transform: translateY(-120px);
+  opacity: 0;
+}
+.card:hover {
+  transform: scale(1.03);
+  -webkit-box-shadow: 0 15px 20px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 20px 0px rgba(0, 0, 0, 0.5);
+}
 
 
 /**************Mobile*************/
@@ -965,7 +1074,7 @@ nav {
     text-align: right;
   }
 
-  /******about page*******/
+  /******About page*******/
   .about-page hr {
     margin: 0 auto;
   }

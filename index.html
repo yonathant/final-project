@@ -1,69 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" class="no-js">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
   <link href="open_sans_hebrew/stylesheet.css" rel="stylesheet" />
-  <link rel="stylesheet" href="mainStyle.css" />
-  <link rel="icon" href="images/favicon.ico" type="image/ico" sizes="16x16" />
+  <link rel="icon" href="images/favicon.ico" type="image/ico" sizes="16x16">
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/demo.css" />
+  <link rel="stylesheet" type="text/css" href="css/component.css" />
+  <link rel="stylesheet" type="text/css" href="css/cs-select.css" />
+  <link rel="stylesheet" type="text/css" href="css/cs-skin-boxes.css" />
+  <link rel="stylesheet" type="text/css" href="css/mainStyle.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
-  <script src="jScript/auth.js"></script>
+  <script src="jScript/modernizr.custom.js"></script>
   <script src="jScript/jquery.js"></script>
   <title>BioIT</title>
 </head>
 
 <body>
-  <div id="container">
-    <div id="login-bg2">
-      <img id="logo-img" src="images/logo.svg" alt="logo bioit" />
-      <div id="login-bg">
-        <div id="login" class="login-shadow">
-          <div class="disappear">
-            <h1>התחל במסע שלך למציאת</h1>
-            <h2 class="type-it"></h2>
-            <div id="login-nav">
-              <ul id="login-ul">
-                <li><a href="#" rel="logintab" class="active">כניסה</a></li>
-                <li><a href="#" rel="regtab" id="regtabHeader">הרשמה</a></li>
-              </ul>
-              <!-- <div id="underline"></div> -->
-            </div>
-            <form id="logintab" class="form-slider">
-              <div class="input-group">
-                <input class="email" type="email" required />
-                <label for="email">מייל</label>
-                <span class="input-bar"></span>
-              </div>
-              <div class="input-group">
-                <input class="pass" type="password" required />
-                <label for="pass">סיסמה</label>
-                <span class="input-bar"></span>
-              </div>
-              <button id="login-btn" type="submit">כניסה</button>
-            </form>
-            <form id="regtab" class="form-slider">
-              <div class="input-group">
-                <input class="email" id="signup-email" type="email" required />
-                <label for="email">מייל</label>
-                <span class="input-bar"></span>
-              </div>
-              <div class="input-group">
-                <input class="pass" id="signup-password" type="password" required />
-                <label for="pass">סיסמה</label>
-                <span class="input-bar"></span>
-              </div>
-              <div class="input-group">
-                <input class="pass" id="confirm-signup-password" type="password" required />
-                <label for="pass">וידוא סיסמה</label>
-                <span class="input-bar"></span>
-              </div>
-              <button id="register-btn" type="submit" onclick="signUp()">הרשמה</button>
-            </form>
+  <div id="container" class="login-screen-bg">
+    <img id="logo-img" src="images/logo.svg" alt="logo bioit" />
+    <div id="login-bg">
+      <div id="login" class="login-shadow">
+        <div class="disappear">
+          <h1>התחל במסע שלך למציאת</h1>
+          <h2 class="type-it"></h2>
+          <div id="login-nav">
+            <ul id="login-ul">
+              <li><a href="#" rel="logintab" class="active">כניסה</a></li>
+              <li><a href="#" rel="regtab" id="regtabHeader">הרשמה</a></li>
+            </ul>
+            <!-- <div id="underline"></div> -->
           </div>
+          <form action="registration.html" id="logintab" class="form-slider">
+            <div class="input-group">
+              <input class="email" type="email" required />
+              <label for="email">מייל</label>
+              <span class="input-bar"></span>
+            </div>
+            <div class="input-group">
+              <input class="pass" type="password" required />
+              <label for="pass">סיסמה</label>
+              <span class="input-bar"></span>
+            </div>
+            <button id="login-btn" type="submit">כניסה</button>
+          </form>
+          <form id="regtab" class="form-slider">
+            <div class="input-group">
+              <input class="email" id="signup-email" type="email" required />
+              <label for="email">מייל</label>
+              <span class="input-bar"></span>
+            </div>
+            <div class="input-group">
+              <input class="pass" id="signup-password" type="password" required />
+              <label for="pass">סיסמה</label>
+              <span class="input-bar"></span>
+            </div>
+            <div class="input-group">
+              <input class="pass" id="confirm-signup-password" type="password" required />
+              <label for="pass">וידוא סיסמה</label>
+              <span class="input-bar"></span>
+            </div>
+            <button id="register-btn" type="submit">הרשמה</button>
+          </form>
         </div>
       </div>
     </div>

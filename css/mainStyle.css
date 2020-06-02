@@ -165,7 +165,7 @@ input {
   display: block;
   width: 300px;
   border: none;
-  border-bottom: 1px solid #3b68ff;
+  border-bottom: 1px solid #1792E6;
   color: white;
   margin-top: 30px;
 }
@@ -196,7 +196,7 @@ input:focus ~ label,
 input:valid ~ label {
   top: -20px;
   font-size: 14px;
-  color: #3b68ff;
+  color: #1792E6;
 }
 
 /* BOTTOM BARS ================================= */
@@ -211,7 +211,7 @@ input:valid ~ label {
   width: 0;
   bottom: 1px;
   position: absolute;
-  background: #3b68ff;
+  background: #1792E6;
   transition: 0.4s ease all;
   -moz-transition: 0.4s ease all;
   -webkit-transition: 0.4s ease all;
@@ -232,7 +232,9 @@ input:focus ~ .input-bar:before {
   -o-animation: blur 1s forwards;
   animation: blur 1s forwards;
 }
-
+.login-screen-bg {
+  max-width: 100%!important;
+}
 #logo-img {
   z-index: 1;
   position: absolute;
@@ -246,7 +248,7 @@ input:focus ~ .input-bar:before {
       rgba(0, 0, 0, 0.1) 5%,
       rgba(0, 0, 0, 0.3) 100%
     ),
-    url(images/mainScreen.png) no-repeat;
+    url('/images/mainScreen.png') no-repeat;
   background-position: 50% 60%;
   background-size: cover;
   height: 100%;
@@ -254,12 +256,12 @@ input:focus ~ .input-bar:before {
   top: 0;
   left: 0;
 }
-#login-bg2 {
-  background: url(images/mainScreen2.png) no-repeat;
+/* #login-bg2 {
+  background: url('/images/mainScreen2.png') no-repeat;
   background-position: 50% 60%;
   background-size: cover;
   height: 100%;
-}
+} */
 #login {
   color: white;
   padding: 50px 70px 0 50px;
@@ -301,7 +303,7 @@ input:focus ~ .input-bar:before {
   font-size: 1.2em;
 }
 #login-ul a.active {
-  color: #3b68ff;
+  color: #1792E6;
 }
 
 #login-btn,
@@ -311,7 +313,7 @@ input:focus ~ .input-bar:before {
   height: 45px;
   border: none;
   border-radius: 10px;
-  background: linear-gradient(45deg, #002bff, #4a74ff, #002bff);
+  background: linear-gradient(45deg, #1792E6, #2a5af8, #1792E6);
   background-size: 300%;
   color: white;
   font-size: 1em;
@@ -454,13 +456,13 @@ li {
   transition: all 0.3s ease;
 }
 .nextButton:hover {
-  background: #3b68ff;
+  background: #1792E6;
 }
 .nextButton:focus {
   outline: none;
 }
 
-/*************Toggle Male Female*************/
+/* ************Toggle Male Female************
 .toggle {
   display: inline-block;
   position: relative;
@@ -557,7 +559,7 @@ li {
   transform: rotate(0deg);
   top: 25px;
   left: 7px;
-}
+} */
 
 /*************DropDown*********/
 .dropdown {
@@ -633,7 +635,7 @@ li {
 
 /************Profile Section (7)**********/
 #profileImg {
-  background: url(images/picUpload.png) no-repeat;
+  background: url('/images/picUpload.png') no-repeat;
   background-size: contain;
   width: 100px;
   height: 100px;
@@ -723,6 +725,7 @@ footer span {
 
 
 /********************Main Page********************/
+
 i {
   font-weight: 900;
 }
@@ -889,7 +892,7 @@ nav {
   position: absolute;
   margin: 0 auto;
   top: -55px;
-  right: 70px;
+  right: 27%;
   width: 110px;
   height: 110px;
 }
@@ -1026,7 +1029,7 @@ nav {
   }
   #login-bg,
   #login-bg2 {
-    background: url(images/mainScreen2.png) no-repeat;
+    background: url('/images/mainScreen2.png') no-repeat;
     background-size: auto;
     background-position: 40% 60%;
   }

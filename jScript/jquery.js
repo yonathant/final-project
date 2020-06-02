@@ -98,7 +98,7 @@ $(document).ready(function () {
       $line
         .css({
           position: "absolute",
-          "background-color": "#3b68ff",
+          "background-color": "#1792E6",
           bottom: "-5px",
           height: "2px",
         })
@@ -140,42 +140,4 @@ $(document).ready(function () {
   //   }, 1500);
   // });
 
-  $(document).on("click", "#nxtBtn1", function () {
-    $("#section1").addClass("fadeUpOut");
-    $("#progBar>div").animate({ width: "20%" }, 1000);
-    setTimeout(function () {
-      $("body").load("registration2.html #container");
-      history.pushState(null, null, "registration2.html");
-    }, 1500);
-  });
-  $(document).on("click", "#nxtBtn2", function () {
-    $("#section2").addClass("fadeUpOut");
-    $("#progBar>div").animate({ width: "40%" }, 1000);
-    setTimeout(function () {
-      $("body").load("registration3.html #container");
-      history.pushState(null, null, "registration3.html");
-    }, 1500);
-  });
-  $(document).on("click", "#nxtBtn3", function () {
-    $("#section3").addClass("fadeUpOut");
-    $("#progBar>div").animate({ width: "100%" }, 1000);
-    setTimeout(function () {
-      $("body").load("registration7.html #container");
-      history.pushState(null, null, "registration7.html");
-    }, 1500);
-  });
-
-  /***********DropDown*********/
-  $(document).on("click", ".dropdown", function () {
-    $(this).attr("tabindex", 1).focus();
-    $(this).toggleClass("open");
-    $(this).find(".dropdown-menu").slideToggle(300);
-  });
-  $(document).on("click", ".dropdown .dropdown-menu li", function () {
-    $(this).parents(".dropdown").find("span").text($(this).text());
-    $(this)
-      .parents(".dropdown")
-      .find("input")
-      .attr("value", $(this).attr("id"));
-  });
 });

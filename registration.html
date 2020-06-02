@@ -1,44 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" class="no-js">
+
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
- <link href="open_sans_hebrew/stylesheet.css" rel="stylesheet"/>
- <link rel="stylesheet" href="mainStyle.css"/>
- <link rel="icon" href="images/favicon.ico" type="image/ico" sizes="16x16">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- <script src="jScript/jquery.js"></script>
- <title>BioIT</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+  <link href="open_sans_hebrew/stylesheet.css" rel="stylesheet" />
+  <link rel="icon" href="images/favicon.ico" type="image/ico" sizes="16x16">
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/demo.css" />
+  <link rel="stylesheet" type="text/css" href="css/component.css" />
+  <link rel="stylesheet" type="text/css" href="css/cs-select.css" />
+  <link rel="stylesheet" type="text/css" href="css/cs-skin-boxes.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="css/mainStyle.css" /> -->
+  <script src="https://kit.fontawesome.com/c7e0c6bf72.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="jScript/modernizr.custom.js"></script>
+  <script src="jScript/jquery.js"></script>
+  <title>BioIT</title>
 </head>
+
 <body>
- <div id="container">
-  <div id="login-bg2">
-  <a  href="./index.html"><img id="logo-img" src="images/logo.svg" alt="logo bioit"></a>
-  <div id="login">
-  <div id="progBar" class="fadeIn">
-    <div></div>
-  </div>
-  <div id="reg-container">
-    <section id="section1">
-      <h1 id="questionTxt">היי, איך קוראים לך?</h1>
-      <input id="ansInput" type="text" placeholder="הקלד שם">
-      <div class="toggle">
-        <input type="checkbox"/>
-        <label></label>
+  <div class="container">
+
+    <div class="fs-form-wrap" id="fs-form-wrap">
+      <div class="fs-title">
+        <img src="/images/logoName.svg" alt="logo bioit">
+        <div class="codrops-top">
+          <a class="codrops-icon codrops-icon-prev"
+            href="http://tympanus.net/Development/NotificationStyles/"><span>לשאלה הקודמת</span></a>
+        </div>
       </div>
-    </section>
-  </div>
-  <button id="nxtBtn1" class="nextButton fadeIn">הבא</button>
-  </div>
-  <footer>
-    <ul>
-      <li><a href="about.html" id="#about-btn">אודות</a></li>
-      <li><a href="#">מידע נוסף</a></li>
-      <li><a href="#">הגדרות</a></li>
-    </ul>
-    <span>BioIt - כל הזכויות שמורות©</span>
-  </footer>
-</div>
+      <form id="myform" class="fs-form fs-form-full" autocomplete="off">
+        <ol class="fs-fields">
+          <li>
+            <label class="fs-field-label fs-anim-upper" for="q1">היי, מהו שמך המלא?</label>
+            <input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="אורן בן אהרון" required />
+          </li>
+          <li>
+            <label class="fs-field-label fs-anim-upper" for="q2">מהו המוסד האקדמי שלך?</label>
+            <input class="fs-anim-lower" id="q2" name="q2" type="text" placeholder="המכון הטכנולוגי חולון" required />
+          </li>
+          <li>
+            <label class="fs-field-label fs-anim-upper" for="q3" data-info="מהם התפקיד/ים שלך">מהו התפקיד
+              שלך?</label>
+            <input class="fs-anim-lower" id="q3" name="q3" type="email" placeholder="מרצה/דיקאן" required />
+          </li>
+          <li data-input-trigger>
+            <label class="fs-field-label fs-anim-upper" for="q4"
+              data-info="מהי ההשכלה שלך, הריי עבדת כל כך קשה בשבילה">מהי ההשכלה שלך?</label>
+            <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+              <span><input id="q4e" name="q4" type="radio" value="conversion" required /><label for="q4e"
+                  class="radio-conversion">תואר ראשון</label></span>
+              <span><input id="q4d" name="q4" type="radio" value="social" required /><label for="q4d"
+                  class="radio-social">תואר
+                  שני</label></span>
+              <span><input id="q4c" name="q4" type="radio" value="mobile" required /><label for="q4c"
+                  class="radio-mobile">תואר
+                  שני במסלול תזה</label></span>
+              <span><input id="q4b" name="q4" type="radio" value="mobile" required /><label for="q4b"
+                  class="radio-mobile">דוקטור</label></span>
+              <span><input id="q4a" name="q4" type="radio" value="mobile" required /><label for="q4a"
+                  class="radio-mobile">פרופסור</label></span>
+            </div>
+          </li>
+          <li data-input-trigger>
+            <label class="fs-field-label fs-anim-upper" data-info="We'll make sure to use it all over">מהי הפקולטה
+              שלך?</label>
+            <select class="cs-select cs-skin-boxes fs-anim-lower" required>
+              <option value="" disabled selected>מהי הפקולטה שלך?</option>
+              <option value="טכנולוגיות למידה" data-class="color-f3e395">טכנולוגיות למידה</option>
+              <option value="הנדסה" data-class="color-f3ae73">הנדסה</option>
+              <option value="עיצוב" data-class="color-da645a">עיצוב</option>
+              <option value="ניהול טכנולוגיה" data-class="color-79a38f">ניהול טכנולוגיה</option>
+              <option value="מדעים" data-class="color-c1d099">מדעים</option>
+              <option value="רב תחומי" data-class="color-f5eaaa">רב תחומי</option>
+              <option value="תעודה" data-class="color-f5be8f">תעודה</option>
+              <option value="מכינות" data-class="color-e1837b">מכינות</option>
+            </select>
+          </li>
+          <li>
+            <label class="fs-field-label fs-anim-upper" for="q5" data-info="כמה שנות ניסיון צברת באקדמיה?">כמה שנות
+              ניסיון יש לך?</label>
+            <input class="fs-mark fs-anim-lower" id="q5" name="q5" type="number" placeholder="5" step="1" min="1"
+              max="40" required />
+          </li>
+          <li data-input-trigger>
+            <label class="fs-field-label fs-anim-upper" for="q6" data-info="האם צברת ניסיון אקדמי כלשהו מחוץ לארץ?">האם
+              יש לך ניסיון בינלאומי?</label>
+            <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+              <span><input id="q6b" name="q6" type="radio" value="mobile" required /><label for="q6b"
+                  class="radio-mobile">כן</label></span>
+              <span><input id="q6a" name="q6" type="radio" value="mobile" required /><label for="q6a"
+                  class="radio-mobile">לא</label></span>
+            </div>
+          </li>
+        </ol><!-- /fs-fields -->
+        <button class="fs-submit" type="submit">צור פרופיל</button>
+      </form><!-- /fs-form -->
+    </div><!-- /fs-form-wrap -->
+
+  </div><!-- /container -->
+  <script src="jScript/classie.js"></script>
+  <script src="jScript/selectFx.js"></script>
+  <script src="jScript/fullscreenForm.js"></script>
+  <script>
+    (function () {
+      var formWrap = document.getElementById('fs-form-wrap');
+
+      [].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
+        new SelectFx(el, {
+          stickyPlaceholder: false,
+          onChange: function (val) {
+            document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+          }
+        });
+      });
+
+      new FForm(formWrap, {
+        onReview: function () {
+          classie.add(document.body, 'overview');
+        }
+      });
+    })();
+  </script>
 </body>
 
 </html>

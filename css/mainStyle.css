@@ -248,7 +248,7 @@ input:focus ~ .input-bar:before {
       rgba(0, 0, 0, 0.1) 5%,
       rgba(0, 0, 0, 0.3) 100%
     ),
-    url('/images/mainScreen.png') no-repeat;
+    url('../images/mainScreen.png') no-repeat;
   background-position: 50% 60%;
   background-size: cover;
   height: 100%;
@@ -635,7 +635,7 @@ li {
 
 /************Profile Section (7)**********/
 #profileImg {
-  background: url('/images/picUpload.png') no-repeat;
+  background: url('../images/picUpload.png') no-repeat;
   background-size: contain;
   width: 100px;
   height: 100px;
@@ -735,7 +735,7 @@ i {
 }
 .wrapper {
   background: rgba(42,56,88,1) ;
-  background-image: url('./images/background.svg');
+  background-image: url('../images/background.svg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -793,7 +793,7 @@ nav {
   border-radius: 50%;
   height: 68px;
   width: 68px;
-  background-image: url('./images/profilepic.jpg');
+  background-image: url('../images/profilepic.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1029,7 +1029,7 @@ nav {
   }
   #login-bg,
   #login-bg2 {
-    background: url('/images/mainScreen2.png') no-repeat;
+    background: url('../images/mainScreen2.png') no-repeat;
     background-size: auto;
     background-position: 40% 60%;
   }

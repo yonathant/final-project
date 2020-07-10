@@ -131,6 +131,22 @@ $(document).ready(function () {
     $("#" + activeTab).fadeIn();
   });
 
+
+  // Or with jQuery
+
+  $('.chips').chips();
+  $('.chips-autocomplete').chips({
+    autocompleteOptions: {
+      data: {
+        'Apple': null,
+        'Microsoft': null,
+        'Google': null
+      },
+      limit: Infinity,
+      minLength: 1
+    }
+  });
+
   // $("#register-btn").click(function () {
   //   $("#login-bg").addClass("fadeOut");
   //   // $(".disappear").fadeOut(700);

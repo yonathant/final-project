@@ -435,6 +435,10 @@ button.fs-continue,
 	background-size: auto 75%;
 	background-repeat: no-repeat;
 }
+#q5 {
+	padding-left: 0;
+	width: 15%;
+}
 
 .fs-fields input.fs-mark[required] {
 	background-image: url(../img/dollar.svg), url(../img/abacusstar.svg);
@@ -689,8 +693,8 @@ button.fs-continue:hover {
 /* Error message */
 .fs-message-error {
 	position: absolute;
-	bottom: 45%;
-	left: 50%;
+	bottom: 52%;
+	left: 46%;
 	z-index: 800;
 	max-width: 960px;
 	width: 70%;

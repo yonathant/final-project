@@ -48,10 +48,9 @@ div.cs-skin-boxes:focus > span {
 }
 
 .cs-skin-boxes .cs-options {
-	position: fixed;
+	position: absolute;
 	width: 920px;
-	height: 50%;
-	top: 55%;
+	height: 400px;
 	margin: 0 auto;
 	overflow: auto;
 	background: none;

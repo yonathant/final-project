@@ -14,7 +14,6 @@
   <link rel="stylesheet" type="text/css" href="css/cs-select.css" />
   <link rel="stylesheet" type="text/css" href="css/cs-skin-boxes.css" />
   <!-- <link rel="stylesheet" type="text/css" href="css/mainStyle.css" /> -->
-  <script src="jScript/materialize.js"></script>
   <script src="https://kit.fontawesome.com/c7e0c6bf72.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="jScript/modernizr.custom.js"></script>
@@ -52,55 +51,62 @@
             <label class="fs-field-label fs-anim-upper" for="q4"
               data-info="מהי ההשכלה שלך, הריי עבדת כל כך קשה בשבילה">מהי ההשכלה שלך?</label>
             <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-              <span><input id="q4e" name="q4" type="radio" value="conversion" required /><label for="q4e"
-                  class="radio-conversion">תואר ראשון</label></span>
-              <span><input id="q4d" name="q4" type="radio" value="social" required /><label for="q4d"
-                  class="radio-social">תואר
+              <span><input id="q4e" name="q4" type="radio" value="תואר ראשון" required /><label for="q4e">תואר
+                  ראשון</label></span>
+              <span><input id="q4d" name="q4" type="radio" value="תואר שני" required /><label for="q4d">תואר
                   שני</label></span>
-              <span><input id="q4c" name="q4" type="radio" value="mobile" required /><label for="q4c"
-                  class="radio-mobile">תואר
-                  שני במסלול תזה</label></span>
-              <span><input id="q4b" name="q4" type="radio" value="mobile" required /><label for="q4b"
-                  class="radio-mobile">דוקטור</label></span>
-              <span><input id="q4a" name="q4" type="radio" value="mobile" required /><label for="q4a"
-                  class="radio-mobile">פרופסור</label></span>
+              <span><input id="q4c" name="q4" type="radio" value="תואר שני תזה" required /><label for="q4c">תואר
+                  שני תזה</label></span>
+              <span><input id="q4b" name="q4" type="radio" value="דוקטור" required /><label
+                  for="q4b">דוקטור</label></span>
+              <span><input id="q4a" name="q4" type="radio" value="פרופרסור" required /><label
+                  for="q4a">פרופסור</label></span>
             </div>
           </li>
           <li data-input-trigger>
-            <label class="fs-field-label fs-anim-upper" data-info="בחר/י את הפקולטה שלך">מהי הפקולטה
+            <label class="fs-field-label fs-anim-upper" for="q5" data-info="בחר/י את הפקולטה שלך">מהי הפקולטה
               שלך?</label>
-            <select class="cs-select cs-skin-boxes fs-anim-lower" required>
-              <option value="" disabled selected>מהי הפקולטה שלך?</option>
-              <option value="טכנולוגיות למידה" data-class="color-f3e395">טכנולוגיות למידה</option>
-              <option value="הנדסה" data-class="color-f3ae73">הנדסה</option>
-              <option value="עיצוב" data-class="color-da645a">עיצוב</option>
-              <option value="ניהול טכנולוגיה" data-class="color-79a38f">ניהול טכנולוגיה</option>
-              <option value="מדעים" data-class="color-c1d099">מדעים</option>
-              <option value="רב תחומי" data-class="color-f5eaaa">רב תחומי</option>
-              <option value="תעודה" data-class="color-f5be8f">תעודה</option>
-              <option value="מכינות" data-class="color-e1837b">מכינות</option>
-            </select>
+            <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+              <span><input id="q5h" name="q5" type="radio" value="טכנולוגיות למידה" required /><label
+                  for="q5h">טכנולוגיות למידה</label></span>
+              <span><input id="q5g" name="q5" type="radio" value="הנדסה" required /><label
+                  for="q5g">הנדסה</label></span>
+              <span><input id="q5f" name="q5" type="radio" value="עיצוב" required /><label
+                  for="q5f">עיצוב</label></span>
+              <span><input id="q5e" name="q5" type="radio" value="ניהול טכנולוגיה" required /><label for="q5e">ניהול
+                  טכנולוגיה</label></span>
+              <span><input id="q5d" name="q5" type="radio" value="מדעים" required /><label
+                  for="q5d">מדעים</label></span>
+              <span><input id="q5c" name="q5" type="radio" value="רב תחומי" required /><label for="q5c">רב
+                  תחומי</label></span>
+              <span><input id="q5b" name="q5" type="radio" value="תעודה" required /><label
+                  for="q5b">תעודה</label></span>
+              <span><input id="q5a" name="q5" type="radio" value="מכינות" required /><label
+                  for="q5a">מכינות</label></span>
+            </div>
           </li>
           <li>
-            <label class="fs-field-label fs-anim-upper" for="q5" data-info="כמה שנות ניסיון צברת באקדמיה?">כמה שנות
+            <label class="fs-field-label fs-anim-upper" for="q6" data-info="כמה שנות ניסיון צברת באקדמיה?">כמה שנות
               ניסיון יש לך?</label>
-            <input class="fs-mark fs-anim-lower" id="q5" name="q5" type="number" placeholder="5" step="1" min="1"
+            <input class="fs-mark fs-anim-lower" id="q6" name="q6" type="number" placeholder="5" step="1" min="1"
               max="40" required />
           </li>
           <li data-input-trigger>
-            <label class="fs-field-label fs-anim-upper" for="q6" data-info="האם צברת ניסיון אקדמי כלשהו מחוץ לארץ?">האם
+            <label class="fs-field-label fs-anim-upper" for="q7" data-info="האם צברת ניסיון אקדמי כלשהו מחוץ לארץ?">האם
               יש לך ניסיון בינלאומי?</label>
             <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
-              <span><input id="q6b" name="q6" type="radio" value="mobile" required /><label for="q6b"
+              <span><input id="q7b" name="q7" type="radio" value="mobile" required /><label for="q7b"
                   class="radio-mobile">כן</label></span>
-              <span><input id="q6a" name="q6" type="radio" value="mobile" required /><label for="q6a"
+              <span><input id="q7a" name="q7" type="radio" value="mobile" required /><label for="q7a"
                   class="radio-mobile">לא</label></span>
             </div>
           </li>
           <li>
-            <label class="fs-field-label fs-anim-upper" for="q7">דרג את תחומי העניין שלך</label>
-            <div class="chips chips-autocomplete"><input class="fs-anim-lower" id="q7" name="q7" type="text"
-                placeholder="אפיון ממשק משתמש" required /></div>
+            <label class="fs-field-label fs-anim-upper" for="q8" data-info="בחר את תחומי העיניין שלך בסדר יורד">דרג את
+              תחומי העניין שלך</label>
+            <div class="chips chips-autocomplete input-field"><input class=" fs-anim-lower" id="q8" name="q8"
+                type="text" placeholder="אפיון ממשק משתמש" required />
+            </div>
           </li>
         </ol><!-- /fs-fields -->
         <button class="fs-submit" type="submit">צור פרופיל</button>
@@ -111,6 +117,7 @@
   <script src="jScript/classie.js"></script>
   <script src="jScript/selectFx.js"></script>
   <script src="jScript/fullscreenForm.js"></script>
+  <script src="jScript/materialize.js"></script>
   <script>
     (function () {
       var formWrap = document.getElementById('fs-form-wrap');

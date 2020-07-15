@@ -305,19 +305,23 @@ button.fs-continue,
 	float: right;
 	position: relative;
 	margin-left: 3%;
-	padding: 10px;
-	max-width: 200px;
-	width: 17%;
+	margin-top: 2%;
 	text-align: center;
 	font-weight: 700;
 	font-size: 50%;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .fs-fields > li .fs-radio-custom span label {
+	padding: 10px 25px;
+	border: 1px solid rgba(255,255,255,0.4);
+	border-radius: 10px;
 	color: rgba(255,255,255,0.4);
 	-webkit-transition: color 0.3s;
-	transition: color 0.3s;
+	transition: color,border 0.3s;
+}
+.fs-fields > li .fs-radio-custom span label:hover {
+	padding: 10px 25px;
+	border: 1px solid #fff;
 }
 .overview .fs-fields > li .fs-radio-custom span label {
 	color: rgba(255,255,255,0.4);
@@ -333,7 +337,6 @@ button.fs-continue,
 
 .fs-fields > li .fs-radio-custom label {
 	display: block;
-	padding-top: 100%;
 	width: 100%;
 	height: 100%;
 	cursor: pointer;
@@ -356,7 +359,7 @@ button.fs-continue,
 	transform: translate(-50%,-50%);
 }
 
-.fs-fields .fs-radio-custom label.radio-mobile::after {
+/* .fs-fields .fs-radio-custom label.radio-mobile::after {
 	background-image: url(../img/mobile.svg);
 }
 
@@ -366,7 +369,7 @@ button.fs-continue,
 
 .fs-fields .fs-radio-custom label.radio-conversion::after {
 	background-image: url(../img/conversion.svg);
-}
+} */
 
 .fs-fields .fs-radio-custom label:hover::after,
 .fs-fields input[type="radio"]:focus + label::after,
@@ -428,24 +431,11 @@ button.fs-continue,
 	box-shadow: 0 20px 0 #292c30, inset 0 -5px #292c30;
 }
 
-.fs-fields input.fs-mark {
-	padding-left: 1em;
-	background-image: url(../img/dollar.svg);
-	background-position: 0% 0.15em;
-	background-size: auto 75%;
-	background-repeat: no-repeat;
-}
-#q5 {
+#q6 {
 	padding-left: 0;
 	width: 15%;
 }
 
-.fs-fields input.fs-mark[required] {
-	background-image: url(../img/dollar.svg), url(../img/abacusstar.svg);
-	background-position: 0% 0.15em, top right;
-	background-size: auto 75%, 18px;
-	background-repeat: no-repeat;
-}
 
 /* placeholder */
 .fs-fields input::-webkit-input-placeholder,
@@ -693,7 +683,7 @@ button.fs-continue:hover {
 /* Error message */
 .fs-message-error {
 	position: absolute;
-	bottom: 52%;
+	bottom: 54%;
 	left: 46%;
 	z-index: 800;
 	max-width: 960px;

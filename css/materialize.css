@@ -2788,7 +2788,7 @@ video.responsive-video {
 .breadcrumb [class^="mdi-"], .breadcrumb [class*="mdi-"],
 .breadcrumb i.material-icons {
   display: inline-block;
-  float: left;
+  float: right;
   font-size: 24px;
 }
 
@@ -4370,7 +4370,7 @@ nav .brand-logo.right {
 nav .brand-logo i,
 nav .brand-logo [class^="mdi-"], nav .brand-logo [class*="mdi-"],
 nav .brand-logo i.material-icons {
-  float: left;
+  float: right;
   margin-right: 15px;
 }
 
@@ -5543,7 +5543,7 @@ button.btn-floating {
 }
 
 .dropdown-content {
-  background-color: #fff;
+  background-color: #3F4E67;
   margin: 0;
   display: none;
   min-width: 100px;
@@ -5568,11 +5568,11 @@ button.btn-floating {
   min-height: 50px;
   line-height: 1.5rem;
   width: 100%;
-  text-align: left;
+  text-align: right;
 }
 
 .dropdown-content li:hover, .dropdown-content li.active {
-  background-color: #eee;
+  background-color: #61718b;
 }
 
 .dropdown-content li:focus {
@@ -5586,7 +5586,7 @@ button.btn-floating {
 
 .dropdown-content li > a, .dropdown-content li > span {
   font-size: 16px;
-  color: #26a69a;
+  color: #1792E6;
   display: block;
   line-height: 22px;
   padding: 14px 16px;
@@ -5594,14 +5594,14 @@ button.btn-floating {
 
 .dropdown-content li > span > label {
   top: 1px;
-  left: 0;
+  right: 0;
   height: 18px;
 }
 
 .dropdown-content li > a > i {
   height: inherit;
   line-height: inherit;
-  float: left;
+  float: right;
   margin: 0 24px 0 0;
   width: 24px;
 }
@@ -5612,7 +5612,7 @@ body.keyboard-focused .dropdown-content li:focus {
 
 .input-field.col .dropdown-content [type="checkbox"] + label {
   top: 1px;
-  left: 0;
+  right: 0;
   height: 18px;
   -webkit-transform: none;
           transform: none;
@@ -5952,23 +5952,24 @@ body.keyboard-focused .dropdown-content li:focus {
   height: 32px;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.6);
+  color: #fff;
   line-height: 32px;
-  padding: 0 12px;
-  border-radius: 16px;
-  background-color: #e4e4e4;
+  padding: 0 20px;
+  border-radius: 10px;
+  background-color: #3F4D67;
   margin-bottom: 5px;
   margin-right: 5px;
+  float: right;
 }
 
 .chip:focus {
   outline: none;
-  background-color: #26a69a;
+  background-color: #1792E6;
   color: #fff;
 }
 
 .chip > img {
-  float: left;
+  float: right;
   margin: 0 8px 0 -12px;
   height: 32px;
   width: 32px;
@@ -5996,27 +5997,26 @@ body.keyboard-focused .dropdown-content li:focus {
 } */
 
 .chips.focus {
-  border-bottom: 1px solid #26a69a;
-  -webkit-box-shadow: 0 1px 0 0 #26a69a;
-          box-shadow: 0 1px 0 0 #26a69a;
+  border-bottom: 1px solid #1792E6;
+  -webkit-box-shadow: 0 1px 0 0 #1792E6;
+          box-shadow: 0 1px 0 0 #1792E6;
 }
 
 .chips:hover {
   cursor: text;
 }
 
+/* .chips {
+  border-bottom: 1px solid #1792E6;
+  width: 100%;
+} */
 .chips .input {
   background: none;
-  border: 0;
-  color: rgba(0, 0, 0, 0.6);
   display: inline-block;
-  font-size: 16px;
-  height: 3rem;
+  font-size: 1em;
   line-height: 32px;
   outline: 0;
   margin: 0;
-  padding: 0 !important;
-  width: 120px !important;
 }
 
 .chips .input:focus {
@@ -6026,12 +6026,13 @@ body.keyboard-focused .dropdown-content li:focus {
 }
 
 .chips .autocomplete-content {
+  padding: 0;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .prefix ~ .chips {
-  margin-left: 3rem;
+  margin-right: 3rem;
   width: 92%;
   width: calc(100% - 3rem);
 }
@@ -6093,7 +6094,7 @@ select:focus {
 
 button:focus {
   outline: none;
-  background-color: #2ab7a9;
+  background-color: #1792E6;
 }
 
 /* label {
@@ -6700,7 +6701,7 @@ textarea.materialize-textarea {
 
 /* Autocomplete */
 .autocomplete-content li .highlight {
-  color: #444;
+  color: #fff;
 }
 
 .autocomplete-content li img {
@@ -7610,7 +7611,7 @@ input[type=range]::-ms-thumb {
 .sidenav li > a > i,
 .sidenav li > a > [class^="mdi-"], .sidenav li > a li > a > [class*="mdi-"],
 .sidenav li > a > i.material-icons {
-  float: left;
+  float: right;
   height: 48px;
   line-height: 48px;
   margin: 0 32px 0 0;

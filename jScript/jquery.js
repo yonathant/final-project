@@ -131,10 +131,6 @@ $(document).ready(function () {
     $("#" + activeTab).fadeIn();
   });
 
-
-  // Or with jQuery
-
-  $('.chips').chips();
   $('.chips-autocomplete').chips({
     autocompleteOptions: {
       data: {

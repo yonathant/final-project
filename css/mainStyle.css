@@ -238,7 +238,7 @@ input:focus ~ .input-bar:before {
 #logo-img {
   z-index: 1;
   position: absolute;
-  width: 50px;
+  width: 100px;
   margin-top: 50px;
   margin-right: 70px;
 }
@@ -305,7 +305,15 @@ input:focus ~ .input-bar:before {
 #login-ul a.active {
   color: #1792E6;
 }
-
+.forgot-pass {
+  display: block;
+  margin: 0.7em 0;
+  color: #7E7E7E;
+  width: fit-content;
+}
+.forgot-pass:hover {
+  color: #1792E6;
+}
 #login-btn,
 #register-btn {
   margin-top: 40px;

@@ -134,9 +134,9 @@ $(document).ready(function () {
   $('.chips-autocomplete').chips({
     autocompleteOptions: {
       data: {
-        'Apple': null,
-        'Microsoft': null,
-        'Google': null
+        'עיצוב ממשק משתמש': null,
+        'הנדסת אנוש': null,
+        'פסיכולוגיה': null
       },
       limit: Infinity,
       minLength: 1

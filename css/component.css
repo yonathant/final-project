@@ -253,7 +253,7 @@ button.fs-continue,
 /* Inputs */
 .fs-fields input {
 	display: block;
-	margin: 0;
+	margin: 0 0 1em 0;
 	padding: 0 0 0.15em;
 	width: 100%;
 	border: none;
@@ -310,7 +310,12 @@ button.fs-continue,
 	font-weight: 700;
 	font-size: 50%;
 }
-
+.fs-fields > li:nth-child(1) .fs-radio-custom span label, .overview .fs-fields > li:nth-child(1) .fs-radio-custom span label {
+	background-color: #1792E6;
+	color: #fff;
+	border: 1px solid rgba(255,255,255,0.1);
+	padding: 10px 1.3em;
+}
 .fs-fields > li .fs-radio-custom span label {
 	padding: 10px 25px;
 	border: 1px solid rgba(255,255,255,0.4);
@@ -433,7 +438,43 @@ button.fs-continue,
 
 #q6 {
 	padding-left: 0;
-	width: 15%;
+	width: 3em;
+}
+#q9, #q10 {
+	font-size: 0.8em;
+}
+#q12 input {
+	margin-left: 10px;
+}
+#q11 input, #q12 input {
+	font-size: 0.7em;
+	margin: 0 0 0.2em 0;
+	width: 80%;
+}
+#q11 .row, #q12 .row {
+	text-align: right;
+	display: flex;
+}
+#q11 .fs-radio-custom span label, #q12 .fs-radio-custom span label{
+	border: none;
+	padding: 0px 25px 10px;
+}
+.overview #q11 .fs-radio-custom span label, .ovreview #q12 .fs-radio-custom span label{
+	padding: 0px 10px 15px;
+}
+#q11 .fs-radio-custom span label:hover, #q12 .fs-radio-custom span label:hover{
+	border: none;
+	color: #1792E6;
+}
+#q11 label.fs-field-label, #q12 label.fs-field-label {
+	padding-bottom: 0.5em;
+}
+#q11 span, #q12 span {
+	margin: 0;
+}
+#q11 .row input:nth-child(1), #q11 .row input:nth-child(2){
+	width: 6em;
+	margin-left: 10px;
 }
 
 
@@ -536,7 +577,7 @@ button.fs-continue,
 	overflow: hidden;
 	color: #676767;
 	margin: 40px;
-	width: 2em;
+	width: 2.6em;
 	font-weight: 700;
 	font-size: 2em;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

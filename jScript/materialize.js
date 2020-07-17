@@ -7863,8 +7863,8 @@ $jscomp.polyfill = function (e, r, p, m) {
         renderedChip.classList.add('chip');
         renderedChip.textContent = chip.tag;
         renderedChip.setAttribute('tabindex', 0);
-        $(closeIcon).addClass('material-icons close');
-        closeIcon.textContent = 'x';
+        $(closeIcon).addClass('fas fa-times-circle close');
+        closeIcon.textContent = ' ';
 
         // attach image if needed
         if (chip.image) {
